@@ -9,7 +9,7 @@ $dotenv->load();
 $client = new Aws\S3\S3Client([
         'version' => 'latest',
         'region'  => $_ENV["BUCKET_REGION"],
-        'endpoint' => 'https://'.$_ENV["BUCKET_REGION"].'.digitaloceanspaces.com',
+        'endpoint' => $_ENV["SPACES_END_POINT"],
         'use_path_style_endpoint' => false, // Configures to use subdomain/virtual calling format.
         'credentials' => [
                 'key'    => $_ENV['SPACES_KEY'],
